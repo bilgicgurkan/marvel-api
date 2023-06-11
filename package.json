@@ -1,0 +1,29 @@
+{
+  "name": "marvel-api",
+  "version": "1.0.0",
+  "description": "marvel movie list with marvelAPI",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --output-public-path=/bundles/  --mode development --open --hot",
+    "build": "webpack --watch"
+  },
+  "keywords": [
+    "marvel",
+    "api",
+    "movie",
+    "list"
+  ],
+  "author": "Gürkan Bilgiç",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.21.8",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.21.5",
+    "babel-loader": "^9.1.2",
+    "cross-env": "^7.0.3",
+    "crypto-browserify": "^3.12.0",
+    "webpack": "^5.83.1",
+    "webpack-cli": "^5.1.1",
+    "webpack-dev-server": "^4.15.0"
+  }
+}
