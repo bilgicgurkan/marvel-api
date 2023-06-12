@@ -1,11 +1,14 @@
 import { Slider } from "./slider";
 import { Marvel } from "./marvelAPI";
 import { UI } from "./ui";
+import { Header } from "./headerScroll";
 
 const slider = new Slider();
 const marvel = new Marvel();
 const ui = new UI();
+const header = new Header();
 
+header.headerColor();
 slider.nextImage();
 slider.prevImage();
 
