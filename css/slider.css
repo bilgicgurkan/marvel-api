@@ -35,7 +35,7 @@ html {
 .image {
     opacity: 0;
     transition: 2s ease-in-out;
-    
+
 }
 
 .image img {
@@ -69,4 +69,12 @@ html {
     cursor: pointer;
     font-size: large;
     text-shadow: 3px 0 4px #fff;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .main-area {
+        top: 100px;
+    }
+
 }

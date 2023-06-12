@@ -1,13 +1,22 @@
 export class UI {
-    constructor(){
+    constructor() {
         this.cards = document.querySelector(".cards");
     }
-    showMovieList(movieData){
+    showMovieList(movieData) {
         let result = "";
 
         movieData.forEach(movie => {
+            let creatorsInfo = "";
+            console.log(movie.creators.items)
+            movie.creators.items.forEach(movieItem => {
+                creatorsInfo +=
+                    `
+                ${movieItem.name},
+                `
+            })
+            // let creatorsInfo;
             result +=
-            `
+                `
             <div class="card-area">
                 <div class="banner-area">
                     <img src="${movie.thumbnail.path}.${movie.thumbnail.extension}" alt="" id="banner-image">
@@ -17,10 +26,10 @@ export class UI {
                         ${movie.title}
                     </div>
                     <div class="description">
-                        Kaptan Amerika Tüm Dünyayı Kötülüklerden Arındırıyor!
+                    ${movie.description}
                     </div>
                     <div class="creators">
-                        Gürkan Bilgiç
+                    ${creatorsInfo}
                     </div>
                 </div>
             </div>

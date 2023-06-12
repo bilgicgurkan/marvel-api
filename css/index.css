@@ -1,29 +1,38 @@
 body {
     font-size: x-large;
+    background-image: url(/images/wp5399598-desktop-marvel-wallpapers.jpg);
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    background-size:cover;
 }
 
 header {
-    background-color: blueviolet;
     width: 100%;
-    height: 50px;
-    position: sticky;
-    top: 0;
+    height: 70px;
+    position: fixed;
+    /* top: 5px; */
     display: grid;
-    grid-template-columns: 20% 80%;
+    grid-template-columns: 15% 85%;
     z-index: 1;
 }
 
+.onScroll {
+    background-color:rgba(99, 37, 37, 0.973);
+    color: #fff;
+}
+
 .header-logo {
-    border: 1px solid #000;
+    /* border-right: 1px solid #000; */
     display: flex;
-    justify-content: center;
+    justify-content: end;
 }
 
 .header-menu {
     display: grid;
-    grid-template-columns: 30% 30% 30%;
-    border: 1px solid #000;
-    align-content: center;
+    grid-template-columns: 20% 20% 25%;
+    justify-content: end;
+    justify-items: center;
+    align-items: center;
 }
 
 .main-page,
@@ -31,28 +40,33 @@ header {
 .category {
     /* border: 1px solid #000; */
     text-align: end;
+    cursor: pointer;
 }
 
 .favorites {
     display: grid;
-    grid-template-columns: 90% 10%;
-    border: 1px solid #000;
+    grid-template-columns: 70% 30%;
+    /* border: 1px solid #000; */
     justify-content: end;
 }
 
 .badges {
-    background-color: red;
+    background-color: rgb(248, 72, 72);
     text-align: center;
     border-radius: 40%;
-    margin-left: 5px;
+    margin-left: 10px;
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 article {
     position: relative;
-    top: 550px;
+    top: 600px;
     display: grid;
     grid-template-columns: 100%;
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
 }
 
 .suggestion {
@@ -63,22 +77,33 @@ article {
 .cards {
     margin-top: 10px;
     display: grid;
-    grid-template-columns: 30% 30% 30%;
+    /* grid-template-columns: 30% 30% 30%; */
+    /* grid-template-columns: 40% 40%; */
+    grid-template-columns: 90%;
     justify-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
+    color: white;
 }
 
 .card-area {
-    border: 1px solid #000;
-    height: 300px;
+    /* border: 1px solid #000; */
+    height: 450px;
     width: 100%;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 40% 60%;
     margin-bottom: 30px;
+
+    border: 1px solid rgba(255, 255, 255, .25);
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.068);
+    /* background-color: rgba(255, 255, 255, 0); */
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(20px);
+
 }
 
 .banner-area {
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -95,24 +120,70 @@ article {
 }
 
 .info-area {
-    backdrop-filter: blur(5px) saturate(10%) brightness(140%);
+    /* backdrop-filter: blur(10px) saturate(10%) brightness(140%); */
     display: grid;
     grid-template-columns: 90%;
     justify-content: center;
-    border: 2px solid #000;
+    /* border: 2px solid #000; */
+    /* background-color: #ffffff83; */
+    /* height: auto; */
+
+}
+
+.description {
+    font-size: medium;
+}
+
+.creators {
+    font-size: medium;
 }
 
 
 @media only screen and (max-width: 900px) {
+
+    .header-menu {
+        grid-template-columns: 30% 30% 35%;
+    }
+
     .cards {
         grid-template-columns: 40% 40%;
-        justify-content:space-around;
+        justify-content: space-around;
+    }
+
+    .card-area {
+        grid-template-columns: 90%;
+        height: auto;
+        justify-content: center;
+        justify-items: center;
+    }
+
+    .banner-area {
+        width: 300px;
+        height: 300px;
+    }
+
+    .info-area {
+        height: 500px;
     }
 }
 
 @media only screen and (max-width: 768px) {
+
+    header {
+        grid-template-columns: 30% 60%;
+        height: 95px;
+    }
+
+    .header-menu {
+        grid-template-columns: 100%;
+        display: grid;
+        justify-items: end;
+        margin-right: 20px;
+    }
+
     .cards {
         grid-template-columns: 90%;
-        justify-content:space-around;
+        justify-content: space-around;
     }
+
 }
