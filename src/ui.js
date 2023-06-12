@@ -24,10 +24,10 @@ export class UI {
                 <div class="info-area">
                     <div class="title">
                         ${movie.title}
-                    </div>
+                    </div> <hr>
                     <div class="description">
                     ${movie.description}
-                    </div>
+                    </div> <hr>
                     <div class="creators">
                     ${creatorsInfo}
                     </div>

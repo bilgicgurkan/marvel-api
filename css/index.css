@@ -1,9 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=B612+Mono:ital@0;1&family=Share+Tech+Mono&display=swap');
+
+/* font-family: 'B612 Mono', monospace;
+font-family: 'Share Tech Mono', monospace; */
+
 body {
     font-size: x-large;
     background-image: url(/images/wp5399598-desktop-marvel-wallpapers.jpg);
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size:cover;
+    background-size: cover;
+    font-family: 'B612 Mono', monospace;
 }
 
 header {
@@ -17,7 +23,7 @@ header {
 }
 
 .onScroll {
-    background-color:rgba(99, 37, 37, 0.973);
+    background-color: rgba(99, 37, 37, 0.973);
     color: #fff;
 }
 
@@ -90,12 +96,12 @@ article {
     height: 450px;
     width: 100%;
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 30% 70%;
     margin-bottom: 30px;
 
     border: 1px solid rgba(255, 255, 255, .25);
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.068);
+    background-color: rgba(255, 255, 255, 0.418);
     /* background-color: rgba(255, 255, 255, 0); */
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(20px);
@@ -103,16 +109,18 @@ article {
 }
 
 .banner-area {
-    /* border: 1px solid #000; */
+    border-right: 1px solid #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
 
 #banner-image {
     /* position: relative; */
-    width: 300px;
-    height: 300px;
+    width: 50%;
+    /* height: 80%; */
     /* margin-left: 10px; */
     z-index: -1;
     /* filter: blur(1px); */
@@ -127,15 +135,27 @@ article {
     /* border: 2px solid #000; */
     /* background-color: #ffffff83; */
     /* height: auto; */
-
+    color: #0a0a0ac7;
 }
 
-.description {
-    font-size: medium;
-}
-
+.description,
 .creators {
     font-size: medium;
+}
+
+.openModal {
+    display: none;
+    margin: auto;
+    border: 2px solid #000;
+    position: fixed;
+    padding-top: 50px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    text-align: center;
+    background-color: rgb(0, 0, 0, 0.9);
+    z-index: 10;
 }
 
 
@@ -160,10 +180,12 @@ article {
     .banner-area {
         width: 300px;
         height: 300px;
+        border-right: none;
     }
 
     .info-area {
-        height: 500px;
+        /* height: 500px; */
+        height: auto;
     }
 }
 
@@ -184,6 +206,10 @@ article {
     .cards {
         grid-template-columns: 90%;
         justify-content: space-around;
+    }
+
+    .openModal img {
+        width: 100%;
     }
 
 }

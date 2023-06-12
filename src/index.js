@@ -2,12 +2,15 @@ import { Slider } from "./slider";
 import { Marvel } from "./marvelAPI";
 import { UI } from "./ui";
 import { Header } from "./headerScroll";
+import { Modal } from "./openImageModal";
 
+const modal = new Modal();
 const slider = new Slider();
 const marvel = new Marvel();
 const ui = new UI();
 const header = new Header();
 
+modal.openModal();
 header.headerColor();
 slider.nextImage();
 slider.prevImage();
