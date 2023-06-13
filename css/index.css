@@ -6,6 +6,7 @@ font-family: 'Share Tech Mono', monospace; */
 body {
     font-size: x-large;
     background-image: url(/images/wp5399598-desktop-marvel-wallpapers.jpg);
+    /* background-image: url(/images/slider-images/marvel-basic-logo.png); */
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -106,6 +107,7 @@ article {
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(20px);
 
+    padding-top: 5px;
 }
 
 .banner-area {
@@ -135,12 +137,21 @@ article {
     /* border: 2px solid #000; */
     /* background-color: #ffffff83; */
     /* height: auto; */
-    color: #0a0a0ac7;
+    color: #000000d5;
+    font-weight: bold;
 }
 
 .description,
 .creators {
     font-size: medium;
+    border-top: 1px solid #00000049;
+    display: flex;
+    align-items: center;
+}
+
+.title {
+    display: flex;
+    align-items: center;
 }
 
 .openModal {
@@ -201,6 +212,7 @@ article {
         display: grid;
         justify-items: end;
         margin-right: 20px;
+        font-size: 18px;
     }
 
     .cards {

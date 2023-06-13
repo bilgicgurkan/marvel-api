@@ -8,8 +8,6 @@ export class Slider {
     }
 
     sliderSettings() {
-        // this.next.addEventListener("click", this.nextImage);
-        // this.prev.addEventListener("click", this.prevImage);
         this.next.addEventListener("click", this.nextImage.bind(this));
         this.prev.addEventListener("click", this.prevImage.bind(this));
     }

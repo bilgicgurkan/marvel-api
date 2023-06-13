@@ -7,14 +7,37 @@ export class UI {
 
         movieData.forEach(movie => {
             let creatorsInfo = "";
-            console.log(movie.creators.items)
-            movie.creators.items.forEach(movieItem => {
+            let descriptionInfo = ""
+
+            // description boş gelmesi halinde ekrana yazılacak uyarı
+            if (movie.description === "" || movie.description === null) {
+                descriptionInfo +=
+                    `
+                ${"Açıklama Bulunamadı"}
+                `
+            } else {
+                descriptionInfo +=
+                    `
+                ${movie.description}
+                `
+            }
+
+            // creators boş gelmesi halinde ekrana yazılacak uyarı
+            if (movie.creators.available === 0) {
                 creatorsInfo +=
                     `
-                ${movieItem.name},
-                `
-            })
-            // let creatorsInfo;
+                        ${"Yazar Bulunamadı"}
+                    `;
+            }else {
+                movie.creators.items.forEach(movieItem => {
+                    creatorsInfo +=
+                    `
+                        ${movieItem.name}
+                    `;
+                })
+            }
+
+
             result +=
                 `
             <div class="card-area">
@@ -24,12 +47,12 @@ export class UI {
                 <div class="info-area">
                     <div class="title">
                         ${movie.title}
-                    </div> <hr>
+                    </div>
                     <div class="description">
-                    ${movie.description}
-                    </div> <hr>
+                        ${descriptionInfo}
+                    </div>
                     <div class="creators">
-                    ${creatorsInfo}
+                        ${creatorsInfo}
                     </div>
                 </div>
             </div>
