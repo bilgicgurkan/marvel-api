@@ -152,6 +152,7 @@ article {
 .title {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .openModal {
@@ -169,6 +170,22 @@ article {
     z-index: 10;
 }
 
+.fa-solid {
+    font-size: 40px;
+    position: absolute;
+    top: 0;
+    right: 0px;
+}
+
+.favorite-button {
+    display: none;
+}
+
+#movieID {
+    display: none;
+}
+
+/* screen media query */
 
 @media only screen and (max-width: 900px) {
 

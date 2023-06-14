@@ -28,11 +28,11 @@ export class UI {
                     `
                         ${"Yazar Bulunamadı"}
                     `;
-            }else {
+            } else {
                 movie.creators.items.forEach(movieItem => {
                     creatorsInfo +=
-                    `
-                        ${movieItem.name}
+                        `
+                        ${movieItem.name}.
                     `;
                 })
             }
@@ -47,6 +47,12 @@ export class UI {
                 <div class="info-area">
                     <div class="title">
                         ${movie.title}
+                        <div class="favorite-button">
+                        <i class="fa-solid fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="id" id="movieID">
+                        ${movie.id}
                     </div>
                     <div class="description">
                         ${descriptionInfo}
@@ -61,4 +67,5 @@ export class UI {
 
         this.cards.innerHTML = result;
     }
+
 }
