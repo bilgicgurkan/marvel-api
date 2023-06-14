@@ -5,11 +5,20 @@ export class Marvel {
         // this.baseUrl = "http://gateway.marvel.com/v1/public/comics"
     }
     async get() {
-        const response = await fetch("http://gateway.marvel.com/v1/public/comics?ts=1&apikey=" + this.publicKey +"&hash=38e472a57181cb4380b9a3fc80ce6a23");
+        const response = await fetch("http://gateway.marvel.com/v1/public/comics?ts=1&apikey=" + this.publicKey + "&hash=38e472a57181cb4380b9a3fc80ce6a23");
         const responseData = await response.json();
 
         return responseData;
     }
+
+    // getFavorite() {
+    //     return new Promise((resolve, reject) => {
+    //         fetch("http://gateway.marvel.com/v1/public/comics?ts=1&apikey=" + this.publicKey + "&hash=38e472a57181cb4380b9a3fc80ce6a23")
+    //             .then(resp => resp.json())
+    //             .then(data => resolve(data))
+    //             .catch(err => reject(err))
+    //     })
+    // }
 }
 
 
