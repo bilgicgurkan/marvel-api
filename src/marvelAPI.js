@@ -1,4 +1,3 @@
-
 export class Marvel {
     constructor() {
         this.publicKey = "961478b3e5212750a2e58d52b80194b4";
@@ -10,6 +9,7 @@ export class Marvel {
 
         return responseData;
     }
+
 
     // getFavorite() {
     //     return new Promise((resolve, reject) => {
