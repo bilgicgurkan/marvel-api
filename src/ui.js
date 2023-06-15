@@ -2,6 +2,7 @@ export class UI {
     constructor() {
         this.cards = document.querySelector(".cards");
     }
+    //api verilerini index sayfasında görüntülemek üzere yazdığımız method
     showMovieList(movieData) {
         let result = "";
 
@@ -67,5 +68,4 @@ export class UI {
 
         this.cards.innerHTML = result;
     }
-
 }

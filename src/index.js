@@ -30,14 +30,13 @@ function eventListeners() {
 
 function showItem() {
     marvel.get()
-    .then(data => {
-        console.log(data.data.results)
-        ui.showMovieList(data.data.results);
-        favorite.showFavoriteButton();
-        modal.openModal();
-        storage.findIDandAddStorage();
-    })
-    .catch(err => console.log(err))
+        .then(data => {
+            ui.showMovieList(data.data.results);
+            favorite.showFavoriteButton();
+            modal.openModal();
+            storage.findIDandAddStorage();
+        })
+        .catch(err => console.log(err))
 };
 
 

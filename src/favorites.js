@@ -3,6 +3,8 @@ export class Favorite {
 
     }
 
+    // kartların üzerine geldiğimizde beğeni butonunun çıkmasını sağlayan method
+
     showFavoriteButton() {
         const cardAreas = document.querySelectorAll(".card-area");
 

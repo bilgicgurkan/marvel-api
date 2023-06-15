@@ -2,6 +2,7 @@ export class Storage {
     constructor() {
 
     }
+    // storage'ın boş ya da dolu olması kontrolünü yaptığımız method
     getStorageList() {
         let list;
 
@@ -13,6 +14,7 @@ export class Storage {
         }
         return list;
     }
+    // beğeni butonuna tıkladığımızda ilgili comic kartın id'sini alıp storage'a kaydeden method
     findIDandAddStorage() {
         let likeButton = document.querySelectorAll(".favorite-button");
         let list = this.getStorageList();
@@ -26,7 +28,7 @@ export class Storage {
                     liked.setAttribute("style", "color:red")
                 }
                 else {
-                    alert("daha önce kaydettiniz")
+                    alert("Daha Önce Beğendiniz!")
                 }
                 localStorage.setItem("liked", JSON.stringify(list))
             })
