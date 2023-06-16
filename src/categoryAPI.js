@@ -1,4 +1,4 @@
-export class Marvel {
+class CategoryAPI {
     constructor() {
         this.publicKey = "961478b3e5212750a2e58d52b80194b4";
         // this.baseUrl = "http://gateway.marvel.com/v1/public/comics"
@@ -9,14 +9,4 @@ export class Marvel {
 
         return responseData;
     }
-
-
-    // getFavorite() {
-    //     return new Promise((resolve, reject) => {
-    //         fetch("http://gateway.marvel.com/v1/public/comics?ts=1&apikey=" + this.publicKey + "&hash=38e472a57181cb4380b9a3fc80ce6a23")
-    //             .then(resp => resp.json())
-    //             .then(data => resolve(data))
-    //             .catch(err => reject(err))
-    //     })
-    // }
 }

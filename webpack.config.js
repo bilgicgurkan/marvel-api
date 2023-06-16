@@ -23,11 +23,11 @@ module.exports = {
   },
   devServer: {
     port: 3200,
-    index: 'index.html'
-  },
-  resolve: {
-    fallback: {
-      crypto: require.resolve('crypto-browserify'),
-    },
-  },
+    index: "index.html"
+  }
+  // resolve: {
+  //   fallback: {
+  //     crypto: require.resolve('crypto-browserify'),
+  //   },
+  // },
 };
