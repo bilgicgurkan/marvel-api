@@ -1,9 +1,5 @@
-export class UI {
-    constructor() {
-        this.cards = document.querySelector(".cards");
-    }
-    //api verilerini index sayfasında görüntülemek üzere yazdığımız method
-    showMovieList(movieData) {
+class CategoryUI {
+    static showInfos(movieData) {
         let result = "";
 
         movieData.forEach(movie => {
@@ -66,7 +62,7 @@ export class UI {
             `
         });
 
-        this.cards.innerHTML = result;
+        document.querySelector(".cardsInfo").innerHTML = result;
+        // this.cardsInfo.innerHTML = result;
     }
-
 }

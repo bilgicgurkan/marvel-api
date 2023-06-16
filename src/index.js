@@ -32,6 +32,7 @@ function showItem() {
     marvel.get()
         .then(data => {
             ui.showMovieList(data.data.results);
+            // ui.showInfos(data.data.results);
             favorite.showFavoriteButton();
             modal.openModal();
             storage.findIDandAddStorage();
@@ -40,6 +41,7 @@ function showItem() {
 };
 
 
+// favoriye eklenenlerin sayısını gösteren fonksiyon
 function showFavLength() {
     let listLength = storage.getStorageList();
     favButton.getFavBtn(listLength);

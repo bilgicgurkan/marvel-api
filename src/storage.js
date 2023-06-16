@@ -34,21 +34,4 @@ export class Storage {
             })
         })
     }
-    // deleteFromStorage() {
-    //     let list = this.getStorageList();
-    //     let likeButton = document.querySelectorAll("#hearts");
-
-    //     likeButton.forEach(function (liked) {
-    //         liked.addEventListener("click", function (e) {
-    //             let id = e.target.parentNode.parentNode.nextElementSibling.textContent.trim();
-    //             let findId = list.findIndex(function (a) {
-    //                 return a === id;
-    //             })
-    //             list.splice(findId, 1);
-    //             localStorage.setItem("liked", JSON.stringify(list))
-    //         })
-    //     })
-    // }
-    
-    // delete methodunu favoriler sayfasında çağırmam lazım
 }
